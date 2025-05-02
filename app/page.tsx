@@ -27,7 +27,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Code className="h-6 w-6" />
-            <span className="text-lg font-bold">DevPortfólio</span>
+            <span className="text-lg font-bold">Gabriel Dev</span>
           </div>
           <Navbar />
           <div className="flex items-center gap-2">
@@ -41,7 +41,8 @@ export default function LandingPage() {
       </header>
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48"> */}
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-17">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -75,7 +76,7 @@ export default function LandingPage() {
                   </Button>
                 </div>
                 <div className="flex items-center gap-4 pt-4 animate-fade-in" style={{ animationDelay: "800ms" }}>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="https://github.com/AllRedCat" className="text-muted-foreground hover:text-foreground">
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </Link>
@@ -180,13 +181,13 @@ export default function LandingPage() {
                 {
                   title: "Frontend",
                   icon: <Code className="h-6 w-6 text-primary" />,
-                  description: "React, Next.js, TypeScript, Tailwind CSS, Redux",
+                  description: "React, Next.js, Vue, TypeScript, Tailwind CSS, Redux",
                   delay: 100,
                 },
                 {
                   title: "Backend",
                   icon: <Server className="h-6 w-6 text-primary" />,
-                  description: "Node.js, Express, NestJS, Python, Django, GraphQL",
+                  description: "Node.js, Express, NestJS, ASP.NET, Python, Django, GraphQL",
                   delay: 200,
                 },
                 {
@@ -444,7 +445,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Code className="h-5 w-5" />
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} DevPortfólio. Todos os direitos reservados.
+              © {new Date().getFullYear()} Gabriel Faria Dev. Todos os direitos reservados.
             </p>
           </div>
           <div className="flex items-center gap-4">
