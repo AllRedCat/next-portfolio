@@ -22,7 +22,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <div className="flex min-h-screen flex-col bg-background text-foreground overflow-x-hidden">
       <header className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -32,14 +32,18 @@ export default function LandingPage() {
           <Navbar />
           <div className="flex items-center gap-2">
             <MobileNav />
-            <Button>
+            <Link href={"#contato"} className="hidden sm:flex items-center gap-2 rounded-md border border-primary bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/80">
               <Mail className="mr-2 h-4 w-4" />
               Contrate-me
-            </Button>
+            </Link>
+            {/* <Button>
+              <Mail className="mr-2 h-4 w-4" />
+              Contrate-me
+            </Button> */}
           </div>
         </div>
       </header>
-      <main className="flex-1">
+      <main className="flex-1 overflow-hidden">
         {/* Hero Section */}
         {/* <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48"> */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-17">
@@ -71,20 +75,20 @@ export default function LandingPage() {
                     Ver Meus Trabalhos
                     <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button size="lg" variant="outline">
+                  {/* <Button size="lg" variant="outline">
                     Baixar Currículo
-                  </Button>
+                  </Button> */}
                 </div>
                 <div className="flex items-center gap-4 pt-4 animate-fade-in" style={{ animationDelay: "800ms" }}>
                   <Link href="https://github.com/AllRedCat" className="text-muted-foreground hover:text-foreground">
                     <Github className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </Link>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="https://www.linkedin.com/in/gabriel-genaro-433a2223a/" className="text-muted-foreground hover:text-foreground">
                     <Linkedin className="h-5 w-5" />
                     <span className="sr-only">LinkedIn</span>
                   </Link>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
+                  <Link href="https://x.com/GabrielRedCat" className="text-muted-foreground hover:text-foreground">
                     <Twitter className="h-5 w-5" />
                     <span className="sr-only">Twitter</span>
                   </Link>
@@ -93,11 +97,11 @@ export default function LandingPage() {
               <div className="flex items-center justify-center animate-fade-in" style={{ animationDelay: "1000ms" }}>
                 <div className="relative aspect-square overflow-hidden rounded-full border-8 border-muted">
                   <Image
-                    src="/placeholder.svg?height=600&width=600"
+                    src="/codding.jpg"
                     width={600}
                     height={600}
                     alt="Foto do desenvolvedor"
-                    className="object-cover"
+                    className="object-cover object-left w-full h-full"
                     priority
                   />
                 </div>
@@ -123,7 +127,7 @@ export default function LandingPage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <SectionObserver animateFrom="left" delay={200}>
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/foto-de-perfil-2.png"
                   width={400}
                   height={400}
                   alt="Imagem sobre mim"
@@ -181,13 +185,13 @@ export default function LandingPage() {
                 {
                   title: "Frontend",
                   icon: <Code className="h-6 w-6 text-primary" />,
-                  description: "React, Next.js, Vue, TypeScript, Tailwind CSS, Redux",
+                  description: "React, Next.js, Vue, TypeScript, Tailwind CSS",
                   delay: 100,
                 },
                 {
                   title: "Backend",
                   icon: <Server className="h-6 w-6 text-primary" />,
-                  description: "Node.js, Express, NestJS, ASP.NET, Python, Django, GraphQL",
+                  description: "Node.js, NestJS, ASP.NET, Python, Django, GraphQL",
                   delay: 200,
                 },
                 {
@@ -199,7 +203,7 @@ export default function LandingPage() {
                 {
                   title: "Mobile",
                   icon: <Smartphone className="h-6 w-6 text-primary" />,
-                  description: "React Native, Flutter, Desenvolvimento iOS/Android",
+                  description: "React Native, Flutter, Desenvolvimento Android",
                   delay: 400,
                 },
               ].map((skill, index) => (
@@ -277,7 +281,7 @@ export default function LandingPage() {
         </SectionObserver>
 
         {/* Testimonials Section */}
-        <SectionObserver id="depoimentos" className="w-full py-12 md:py-24 lg:py-32">
+        {/* <SectionObserver id="depoimentos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -340,10 +344,10 @@ export default function LandingPage() {
               ))}
             </div>
           </div>
-        </SectionObserver>
+        </SectionObserver> */}
 
         {/* Contact Section */}
-        <SectionObserver id="contato" className="w-full py-12 md:py-24 lg:py-32 bg-muted/10">
+        <SectionObserver id="contato" className="w-full py-12 md:py-24 lg:py-32 ">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Entre em Contato</div>
@@ -363,11 +367,11 @@ export default function LandingPage() {
               <div className="pt-4 space-y-4">
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5 text-muted-foreground" />
-                  <span>contato@exemplo.com</span>
+                  <span>leonismogabriel@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Smartphone className="h-5 w-5 text-muted-foreground" />
-                  <span>+55 (11) 98765-4321</span>
+                  <span>(34) 98411-3922</span>
                 </div>
               </div>
             </div>
@@ -449,15 +453,15 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="https://github.com/AllRedCat" className="text-muted-foreground hover:text-foreground">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="https://www.linkedin.com/in/gabriel-genaro-433a2223a/" className="text-muted-foreground hover:text-foreground">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground">
+            <Link href="https://x.com/GabrielRedCat" className="text-muted-foreground hover:text-foreground">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
